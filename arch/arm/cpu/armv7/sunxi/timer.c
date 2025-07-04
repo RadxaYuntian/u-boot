@@ -225,7 +225,7 @@ unsigned long long get_ticks(void)
  */
 ulong get_tbclk(void)
 {
-	return CONFIG_SYS_HZ;
+	return TIMER_CLOCK;
 }
 
 #if defined(CONFIG_MACH_SUN55IW6)
