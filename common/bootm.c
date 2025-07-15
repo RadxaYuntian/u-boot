@@ -315,7 +315,7 @@ int bootm_find_images(int flag, int argc, char * const argv[])
 {
 	 __attribute__((unused)) int ret;
 
-#if !defined(CONFIG_SUNXI_INITRD_ROUTINE)
+#if !defined(CONFIG_SUNXI_INITRD_ROUTINE) || defined(CONFIG_DISTRO_DEFAULTS)
 	/* ramdisk manually processed, pass*/
 	/* find ramdisk */
 	ret = boot_get_ramdisk(argc, argv, &images, IH_INITRD_ARCH,
